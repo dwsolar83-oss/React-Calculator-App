@@ -28,15 +28,13 @@ describe('Calculator Operations', () => {
     expect(calculatorOperations['='].func(6, 2)).toBe(2);
   });
 
-   // NEW TESTS - Division by zero
- it('should handle division by zero', () => {
-   expect(calculatorOperations['/'].func(6, 0)).toBe(Infinity);
- });
+  // NEW TESTS - Division by zero
+  it('should handle division by zero', () => {
+    expect(calculatorOperations['/'].func(6, 0)).toBe(Infinity);
+  });
 
-
- it('should handle zero divided by zero', () => {
-   const result = calculatorOperations['/'].func(0, 0);
-   expect(Number.isNaN(result)).toBe(true);
- });
-
+  it('should handle zero divided by zero', () => {
+    const result = calculatorOperations['/'].func(0, 0);
+    expect(Number.isNaN(result)).toBe(true);
+  });
 });
